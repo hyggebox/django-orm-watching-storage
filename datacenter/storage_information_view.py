@@ -1,7 +1,7 @@
 from datacenter.models import Visit
 from django.shortcuts import render
 from django.utils.timezone import localtime
-from helpers import format_duration, is_visit_long
+from datacenter.helpers import format_duration, is_visit_long
 
 
 def get_duration(visitor):
