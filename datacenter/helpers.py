@@ -7,3 +7,9 @@ def format_duration(duration):
 def is_visit_long(duration):
     long_visit_sec = 3600
     return duration > long_visit_sec
+
+
+def get_duration(left_at, entered_at):
+    time_delta = left_at - entered_at
+    delta_sec = time_delta.total_seconds()
+    return delta_sec

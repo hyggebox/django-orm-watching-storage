@@ -1,13 +1,9 @@
-from datacenter.models import Visit
 from django.shortcuts import render
 from django.utils.timezone import localtime
-from datacenter.helpers import format_duration, is_visit_long
 
+from datacenter.helpers import format_duration, is_visit_long, get_duration
+from datacenter.models import Visit
 
-def get_duration(visitor):
-    time_delta = localtime() - localtime(visitor.entered_at)
-    delta_sec = time_delta.total_seconds()
-    return delta_sec
 
 
 def storage_information_view(request):
@@ -15,7 +11,7 @@ def storage_information_view(request):
     non_closed_visits = []
 
     for visitor in visitors_at_storage:
-        visit_duration = get_duration(visitor)
+        visit_duration = get_duration(localtime(), localtime(visitor.entered_at))
         formated_time = format_duration(visit_duration)
 
         non_closed_visits.append({
