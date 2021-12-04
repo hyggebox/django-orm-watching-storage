@@ -11,7 +11,7 @@ def get_duration(visit):
 
 
 def passcard_info_view(request, passcode):
-    passcard = Passcard.objects.filter(passcode=passcode)[0]
+    passcard = Passcard.objects.get(passcode=passcode)
     this_passcard_visits = []
 
     all_visits = Visit.objects.filter(passcard=passcard)
