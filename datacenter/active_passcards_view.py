@@ -12,4 +12,3 @@ def active_passcards_view(request):
 
 
 
-
