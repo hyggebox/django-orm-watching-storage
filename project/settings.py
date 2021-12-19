@@ -12,7 +12,7 @@ DATABASES = {'default': dj_database_url.config(default=env('DB_URL'))}
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = 'REPLACE_ME'
+SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env.bool('DEBUG', default=False)
 
