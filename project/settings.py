@@ -16,7 +16,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env.bool('DEBUG', default=False)
 
-ROOT_URLCONF = "project.urls"
+ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = ['*']
 
