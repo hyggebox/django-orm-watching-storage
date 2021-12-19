@@ -21,6 +21,10 @@ DB_URL=postgres://USER:PASSWORD@HOST:PORT/NAME
 - NAME - название_БД
 - USER - пользователь
 
+Задайте SECRET_KEY в `.env`
+```
+SECRET_KEY=<ваш_secret_key>
+```
 
 Также в `.env` включается отладочный режим работы сайта: `DEBUG` (true/false). По умолчанию
 отладочный режим отключен (`DEBUG = False`). Например:
